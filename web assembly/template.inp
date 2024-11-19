@@ -15,13 +15,13 @@ rate 1.54 THz
 # You may five a Lorentzian linewidth with l=# or L=#.
 # If you omit these linewidths, they default to 10.0.
 #/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-#peak 1949.8 0.38 l=5.6 g=1.2
-#peak 1970.3 0.35 L=5.6 g=0.9
-#peak 2027.6 0.27 l=2.6 G=0.7
+peak 1949.8 0.38 l=5.6 g=1.2
+peak 1970.3 0.35 L=5.6 g=0.9
+peak 2027.6 0.27 l=2.6 G=0.7
 # or, you may number the peaks yourself if you wish:
-peak 1935.0 1.0 g=8 num=1
-peak 1965.0 0.6 L=11 g=9 num=2
-peak 2050.0 1.0 num=3
+#peak 1935.0 1.0 g=8 num=1
+#peak 1965.0 0.6 L=11 g=9 num=2
+#peak 2050.0 1.0 num=3
 
 #/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 # The exchange lines dictates the relatice exchange rate between two

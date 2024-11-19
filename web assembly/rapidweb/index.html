@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectroscopic Peak Simulation</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="plot">A figure will appear when the page is ready to be used.
+        <div id="plotlyChart"></div>
+        Choose spectrum to load: 
+        <input type="file" id="expData">
+        <button id="simulate">Simulate</button>
+        <div>
+            The vibrational spectrum file should have two columns. The first column should have the wavenumbers and the second the absorbance. The first two rows in your file will be ignored. 
+        </div>
+    </div>
+    <div id="inputArea">
+        <div>
+            <h2>Peak Data</h2>
+            <div class="input-container">
+                <span class="input-header">Row</span>
+                <span class="input-header">Position</span>
+                <span class="input-header">Intensity</span>
+                <span class="input-header">Lorentzian</span>
+                <span class="input-header">Gaussian</span>
+            </div>
+            <div id="inputRows" class="input-container">
+                <!-- Dynamic input rows will be added here -->
+            </div>
+            <button id="addRow">Add Row</button>
+
+        </div>
+
+        <div>
+            <h2>Exchange Block</h2>
+            <div>
+                <input type="checkbox" id="symmetric" checked>
+                <label for="symmetric">Symmetric</label>
+                rate: 
+                <input type="text" placeholder="base_rate" class="base_rate"> in THz (1e12 s-1)
+            </div>
+            <br>
+            <div id="exchangeContainer" class="exchange-container">
+                <!-- Dynamic exchange rows will be added here -->
+            </div>
+        </div>
+        <div>
+            The "base rate" is the overall rate of the process. 
+            If you put numbers above and below the double arrows, this is indicating the relative rates between the forward and reverse exchanges.  The rates are also relative across all exchanges shown. 
+        </div>
+    </div>
+    <script type="module" src="rapidScript.js"></script>
+</body>
+</html>
